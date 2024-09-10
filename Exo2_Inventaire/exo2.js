@@ -1,21 +1,19 @@
 function findHighestStockProduct(n, products) {
   let productsMap = new Map();
 
-  for (let i = 0; i < n; i++) {
-    if (n > products.length) {
-      console.log(
-        "number is more than products. please enter as much number as products!"
-      );
-    } else {
+  if (n > products.length) {
+    console.log(
+      "number is more than products. please enter as much number as products!"
+    );
+  } else {
+    for (let i = 0; i < n; i++) {
       var [name, price] = products[i].split(" ");
-    }
-    prices = parseInt(price);
-    // console.log(prices)
-
-    if (productsMap.has(name)) {
-      productsMap.set(name, productsMap.get(name) + prices);
-    } else {
-      productsMap.set(name, prices);
+      prices = parseInt(price);
+      if (productsMap.has(name)) {
+        productsMap.set(name, productsMap.get(name) + prices);
+      } else {
+        productsMap.set(name, prices);
+      }
     }
   }
 
@@ -28,7 +26,7 @@ function findHighestStockProduct(n, products) {
     }
   });
 
-  //   console.log(result)
+  // console.log(result)
 
   return result.join(" ");
 }
