@@ -1,4 +1,4 @@
-text = "Exo1/t.txt"
+text = "Exo1_score_de_Scrabble/t.txt"
 
 with open (text, 'r') as t:
     data = t.read() # i changed readlines with read, cause i use strip() and splitlines() functions
