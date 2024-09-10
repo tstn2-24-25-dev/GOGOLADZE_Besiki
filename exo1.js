@@ -20,6 +20,8 @@ function calc(value) {
     //     e = i
     // })
     console.log(e);
+
+    console.log()
     
   for (let i = 0; i < value.length; i++) {
     // console.log(value[i], )
