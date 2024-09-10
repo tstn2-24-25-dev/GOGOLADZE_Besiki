@@ -1,9 +1,8 @@
 inputInt = int(input("write from 10 to 1000: "))
-inputString = input("write products and price: ")
 
 
 
-def findHighestStockProduct(n, product):
+def findHighestStockProduct(n):
     num = 1;
     
     while num <= n:
@@ -13,4 +12,4 @@ def findHighestStockProduct(n, product):
     
 
 
-findHighestStockProduct(inputInt, inputString)
+findHighestStockProduct(inputInt)
