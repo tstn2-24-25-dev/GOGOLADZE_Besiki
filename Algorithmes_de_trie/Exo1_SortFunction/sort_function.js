@@ -1,6 +1,6 @@
 let arr = [5, 2, 4, 3, 1];
 
-function sort(arr) {
+function sort_function(arr) {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length - 1 - i; j++) {
       if (arr[j] > arr[j + 1]) {
@@ -13,4 +13,4 @@ function sort(arr) {
   return arr;
 }
 
-console.log(sort(arr));
+console.log(sort_function(arr));

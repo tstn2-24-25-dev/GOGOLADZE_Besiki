@@ -1,6 +1,6 @@
 let arr = [33, 27, 8, 54, 16, 31, 14];
 
-function trieFusion(value) {
+function trie_fusion(value) {
   const halfLength = Math.floor(value.length / 2);
   const firstHalf = value.slice(0, halfLength);
   const secondHalf = value.slice(halfLength, value.length);
@@ -21,4 +21,4 @@ function trieFusion(value) {
   return `[${mainFunction(firstHalf)}] [${mainFunction(secondHalf)}]`;
 }
 
-console.log(trieFusion(arr));
+console.log(trie_fusion(arr));
