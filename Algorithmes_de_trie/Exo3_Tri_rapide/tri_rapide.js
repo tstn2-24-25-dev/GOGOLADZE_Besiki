@@ -1,16 +1,29 @@
-let arr = [4, 8, 2, 10, 1, 9, 7, 6, 3, 5];
+const arr = [4, 8, 2, 10, 1, 9, 7, 6, 3, 5];
 
-function tri_rapide(val) {
-  let num = 0;
-  for (let i = 0; i < val.length; i++) {
-    if (val[i] <= val[i + 1]) {
-      num = val[i];
-      if (num <= val[i]) {
-        num = val[i];
-      }
+function mainFunction(arr, low, high) {
+  let higher = arr[high];
+  let i = low - 1;
+
+  for (let j = low; j < high; j++) {
+    if (arr[j] <= higher) {
+      i++;
+      [arr[i], arr[j]] = [arr[j], arr[i]];
     }
   }
-  console.log(num);
+
+  [arr[i + 1], arr[high]] = [arr[high], arr[i + 1]];
+
+  return i + 1;
 }
 
-tri_rapide(arr);
+function tri_rapide(arr, low = 0, high = arr.length - 1) {
+  if (low < high) {
+    let higherIndex = mainFunction(arr, low, high);
+
+    tri_rapide(arr, low, higherIndex - 1);
+    tri_rapide(arr, higherIndex + 1, high);
+  }
+  return arr;
+}
+
+console.log(tri_rapide(arr));
